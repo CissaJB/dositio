@@ -69,7 +69,12 @@ describe('###Tests for Authenticated routes', async(t) => {
                 url: '/products',
                 headers: {
                     'x-access-token': token,
-                },
+                }, 
+                body: {
+                    "name": "Nome_do_Produto",
+                    "qtd": 5, 
+                    "categorieId": "Categoria_do_produto"
+                }
             });
     
             equal(response.statusCode, 201); 
