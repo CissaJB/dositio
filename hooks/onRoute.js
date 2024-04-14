@@ -1,5 +1,5 @@
 /** @type{import('fastify').FastifyPluginAsync<>} */
-import {checkCategoriesExistence,checkPruductsExistence, checkUsersExistence, extractUser, logMe} from './functions/index.js';
+import {checkCategoriesExistence,checkPruductsExistence, checkUsersExistence, Not_Admin ,extractUser, logMe} from './functions/index.js';
 
 export default async function onRouteHook(app, options) {
     app.addHook('onRoute', (routeOptions) => {
@@ -28,6 +28,9 @@ export default async function onRouteHook(app, options) {
         }
         if(routeOptions.url === '/register' && routeOptions.method === 'POST'){
             routeOptions.preHandler.push(checkUsersExistence(app));
+        }
+        if(routeOptions.url === '/products' && routeOptions.method === 'POST'){
+            routeOptions.preHandler.push(Not_Admin(app));
         }
     });
 }
