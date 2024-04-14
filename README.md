@@ -49,4 +49,8 @@ A também uma maneira de adicionar os dados pelo thunderclient, realizando uma r
 
 PS: Este produto **já existe** no banco de dados
 
-Todas as requisições HTTP (GET, PUT, POST e DELETE) podem ser feitas por meio do thunderclient tanto categories quanto para products
+Todas as requisições HTTP (GET, PUT, POST e DELETE) podem ser feitas por meio do thunderclient tanto categories quanto para products, mas a requisição GET é a única que não precisa de Autenticação. Para conseguir Autenticação siga os passos abaixo:
+- Faça um requisição POST para  `http://127.0.0.1:3000/auth`
+- Isso retornará um token de acesso, copie e cole em headers.
+- Em header coloque x-access-token e em value coloque o token.
+Pronto, agora com esse token todas as requisições podem ser feitas.
