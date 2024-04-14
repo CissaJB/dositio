@@ -42,6 +42,7 @@ A também uma maneira de adicionar os dados pelo thunderclient, realizando uma r
     "qtd": 20,
     "categorieId": "661b156d32e4efa9e54e5770" -> Id da categoria de frutas
 }
+
 PS: Este produto **já existe** no banco de dados
 
-Todas as requisições HTTP (GET, PUT, POST e DELETE) podem ser feitas por meio do thunderclient para tanto categories quanto para products
+Todas as requisições HTTP (GET, PUT, POST e DELETE) podem ser feitas por meio do thunderclient tanto categories quanto para products
