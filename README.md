@@ -1,4 +1,4 @@
-# Trabalho1 do 1°Bimestre (Programação para WEB avançada)
+# Trabalho1 do 1°Bimestre (Programação avançada para WEB)
 
 ### Aluna: Cecilia de Jesus Barros
 ### Turma: CC5MB
