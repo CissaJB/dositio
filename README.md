@@ -1,4 +1,4 @@
-# Trabalho1 do 1°Bimestre
+# Trabalho1 do 1°Bimestre (Programação para WEB avançada)
 
 ### Aluna: Cecilia de Jesus Barros
 ### Turma: CC5MB
@@ -39,7 +39,7 @@ No Projeto existe uma pasta chamada dados...nela coloquei os arquivos JSON criad
 - Crie agora uma coleção para products e importe o arquivo "dositio.products.json"
 - Crie uma coleção para users e importe o arquivo "dositio.users.json"
 
-A também uma maneira de adicionar os dados pelo thunderclient, realizando uma requisão POST com o servidor rodando em http://127.0.0.1:3000 por exemplo para criar um novo produtos faça uma requisição POST em http://127.0.0.1:3000.products e em **body** adicione por exemplo:
+A também uma maneira de adicionar os dados pelo thunderclient, realizando uma requisão POST com o servidor rodando em http://127.0.0.1:3000 por exemplo para criar um novo produto faça uma requisição POST em http://127.0.0.1:3000/products e em **body** adicione por exemplo:
 
 {
     "name": "Tomate",
