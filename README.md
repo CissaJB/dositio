@@ -53,11 +53,12 @@ PS: Este produto **já existe** no banco de dados
 Todas as requisições HTTP (GET, PUT, POST e DELETE) podem ser feitas por meio do thunderclient tanto categories quanto para products, mas a requisição GET é a única que não precisa de Autenticação. Para conseguir Autenticação siga os passos abaixo:
 - Faça um requisição POST para  `http://127.0.0.1:3000/auth` no body é preciso ter:
 
+```
   {
     "name": "Cecilia",  -> Pode usar qualquer nome
     "password": "Abcd@1234" -> Para gerar o token essa senha é obrigatória
   }
-  
+```
 - Isso retornará um token de acesso, copie e cole em headers.
 - Em header coloque "x-access-token" e em value coloque o token gerado.
 Pronto, agora com esse token todas as requisições podem ser feitas.
