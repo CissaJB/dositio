@@ -41,11 +41,11 @@ No Projeto existe uma pasta chamada dados...nela coloquei os arquivos JSON criad
 
 A também uma maneira de adicionar os dados pelo thunderclient, realizando uma requisão POST com o servidor rodando em http://127.0.0.1:3000 por exemplo para criar um novo produto faça uma requisição POST em http://127.0.0.1:3000/products e em **body** adicione por exemplo:
 
-{
-    "name": "Tomate",
-    "qtd": 20,
-    "categorieId": "661b156d32e4efa9e54e5770" -> Id da categoria de frutas
-}
+> {
+>> "name": "Tomate",
+>> "qtd": 20,
+>> "categorieId": "661b156d32e4efa9e54e5770" -> Id da categoria de frutas
+> }
 
 PS: Este produto **já existe** no banco de dados
 
