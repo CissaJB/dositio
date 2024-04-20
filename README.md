@@ -37,8 +37,13 @@ No Projeto existe uma pasta chamada dados...nela coloquei os arquivos JSON criad
 - Crie uma database com o nome "dositio" e uma coleção com o nome "categories"
 - Importe o arquivo "dositio.categories.json" que esta neste projeto
 - Crie agora uma coleção para products e importe o arquivo "dositio.products.json"
-- Crie uma coleção para users e importe o arquivo "dositio.users.json"
 
+### Para fazer os testes
+Com os arquivos já no servidor, agora é a hora de testar
+- Utilize o comando **npm run test**
+NÃO teste mais de 1 vez, pois como há testes de POST e DELETE os dados do servidor vão ser alterados, para testar novamente apague os dados no Mongo, carregue os arquivos novamente e inicie o teste.
+
+### Utilizando o Thunderclient
 A também uma maneira de adicionar os dados pelo thunderclient, realizando uma requisão POST com o servidor rodando em http://127.0.0.1:3000 por exemplo para criar um novo produto faça uma requisição POST em http://127.0.0.1:3000/products e em **body** adicione por exemplo:
 
 ````
