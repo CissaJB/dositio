@@ -41,6 +41,7 @@ No Projeto existe uma pasta chamada dados...nela coloquei os arquivos JSON criad
 ### Para fazer os testes
 Com os arquivos já no servidor, agora é a hora de testar
 - Utilize o comando **npm run test**
+  
 NÃO teste mais de 1 vez, pois como há testes de POST e DELETE os dados do servidor vão ser alterados, para testar novamente apague os dados no Mongo, carregue os arquivos novamente e inicie o teste.
 
 ### Utilizando o Thunderclient
