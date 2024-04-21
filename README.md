@@ -46,7 +46,10 @@ Com os arquivos já no servidor, agora é a hora de testar
 **NÃO** teste mais de 1 vez, pois como há testes de POST e DELETE os dados do servidor vão ser alterados, para testar novamente apague os dados no Mongo, carregue os arquivos novamente e inicie o teste.
 
 ### Utilizando o Thunderclient
-A também uma maneira de adicionar os dados pelo thunderclient, por exemplo para criar um novo produto faça uma requisição POST em http://127.0.0.1:3000/products e em **body** adicione por exemplo:
+A também uma maneira de adicionar os dados pelo thunderclient,mas antes é necessário "rodar" o servidor, no terminal faça **node server**.
+
+Com o servidor pronto:
+Por exemplo para criar um novo produto faça uma requisição POST em http://127.0.0.1:3000/products e em **body** adicione por exemplo:
 
 ````
 {
