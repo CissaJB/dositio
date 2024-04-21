@@ -10,7 +10,7 @@ describe('###Tests for Server Configuration', async(t) => {
             await app.close();
         });
 
-        deepEqual(options.stage, 'test');
+        deepEqual(options.stage, 'dev');
         deepEqual(options.port, '3000');
         deepEqual(options.host, '127.0.0.1');
         deepEqual(options.jwt_secret, 'Abcd@1234');
