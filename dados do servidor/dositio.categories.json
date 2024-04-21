@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "661b11f732e4efa9e54e576e"
+  },
+  "name": "Verduras e Legumes",
+  "img_URL": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.significados.com.br%2Fverduras-e-legumes%2F&psig=AOvVaw2Q67PeZnCW1r1-uBhOu9C8&ust=1713136408943000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKCxqc2owIUDFQAAAAAdAAAAABAE"
+},
+{
+  "_id": {
+    "$oid": "661b12fd32e4efa9e54e576f"
+  },
+  "name": "Temperos",
+  "img_URL": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tudogostoso.com.br%2Fnoticias%2Ftemperos-aprenda-como-utiliza-los-na-preparacao-de-cada-tipo-de-prato-a925.htm&psig=AOvVaw0vd3-N7elJY8Az3-XQfrYz&ust=1713136559442000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLje5pSpwIUDFQAAAAAdAAAAABAE"
+},
+{
+  "_id": {
+    "$oid": "661b156d32e4efa9e54e5770"
+  },
+  "name": "Frutas",
+  "img_URL": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbrasilescola.uol.com.br%2Ffrutas&psig=AOvVaw1u5Ylf7Zp-vNsvrDORLNkP&ust=1713137343399000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJivj46swIUDFQAAAAAdAAAAABAE"
+},
+{
+  "_id": {
+    "$oid": "6623e594a5a68e1749fff3eb"
+  },
+  "name": "Nova_Categoria",
+  "img_URL": "https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.knobel.com.br%2F2018%2F09%2F14%2Flaticinios-integrais-podem-fazer-bem-a-sua-saude%2F&psig=AOvVaw3q6TxaoqEg-48ocPBKfRWI&ust=1713714840155000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCICM2beT0YUDFQAAAAAdAAAAABAJ"
+}]
