@@ -64,7 +64,7 @@ PS: Este produto **já existe** no banco de dados
 
 
 ## Como Conseguir um Token de Autenticação 
-Todas as requisições HTTP (GET, PUT, POST e DELETE) podem ser feitas por meio do thunderclient tanto categories quanto para products, mas a requisição GET é a única que não precisa de Autenticação. Para conseguir Autenticação siga os passos abaixo:
+Todas as requisições HTTP (GET, PUT, POST e DELETE) podem ser feitas por meio do thunderclient tanto para categories quanto para products, mas a requisição GET é a única que não precisa de Autenticação. Para conseguir Autenticação siga os passos abaixo:
 - Faça um requisição POST para  `http://127.0.0.1:3000/auth` no body é preciso ter:
 
 ```
