@@ -119,7 +119,7 @@ describe ('###Tests for Unauthenticated Routes', async(t) => {
         });
         equal(response.statusCode, 200);
     });
-    test('# GET /categories/:id', async(t) => {
+    test('# GET /categories/:id/products', async(t) => {
         const app = await build(options);
         t.after(async() => {
             await app.close();
@@ -150,6 +150,50 @@ describe ('###Tests for Unauthenticated Routes', async(t) => {
             });
             equal(response.statusCode, 400);
         })
+        
+         test('# POST /register', async(t) => {
+            const app = await build(options);
+
+            t.after(async() => {
+                await app.close();
+            });
+            const response = await app.inject({
+                method: 'POST',
+                url: '/register',
+                body: {
+                    "name": "Cecilia",
+                    "password": "123456"
+                }
+            });
+            equal(response.statusCode, 412);
+        })
+        
+         test('# GET /product', async(t) => {
+            const app = await build(options);
+
+            t.after(async() => {
+                await app.close();
+            });
+            const response = await app.inject({
+                method: 'GET',
+                url: '/product'
+            });
+            equal(response.statusCode, 404);
+        });
+        
+        test('# GET /categorie', async(t) => {
+            const app = await build(options);
+
+            t.after(async() => {
+                await app.close();
+            });
+            const response = await app.inject({
+                method: 'GET',
+                url: '/categorie'
+            });
+            equal(response.statusCode, 404);
+        });
+        
     });
 })
 
@@ -344,6 +388,28 @@ describe('###Tests for Authenticated routes', async(t) => {
                 }
             });
             equal(response.statusCode, 401); 
+        });
+        
+         test('# POST /product', async (t) => {
+            const app = await build(options);
+    
+            t.after(async () => {
+                await app.close();
+            });
+    
+            const response = await app.inject({
+                method: 'POST',
+                url: '/product', 
+                headers: {
+                "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2lzc2EiLCJpYXQiOjE3MTMzOTY5MTF9.HdqQ_JEXCjo4YdCsLlbecupzwAqZVaWPM4dd_ICdjZ0"
+                }, 
+                body: {
+                    "nome": "Cereja",
+                    "qtd" : 5,
+                    "categorieId": "661b156d32e4efa9e54e5770"
+                }
+            });
+            equal(response.statusCode, 404); 
         });
 
         test('# PUT /categories', async(t) => {
