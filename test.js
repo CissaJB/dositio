@@ -412,6 +412,73 @@ describe('###Tests for Authenticated routes', async(t) => {
             equal(response.statusCode, 404); 
         });
 
+        test('# POST /products', async (t) => {
+            const app = await build(options);
+
+            t.after(async () => {
+                await app.close();
+            });
+
+            const response = await app.inject({
+                method: 'POST',
+                url: '/products',
+                headers: {
+                    "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2lzc2EiLCJpYXQiOjE3MTMzOTY5MTF9.HdqQ_JEXCjo4YdCsLlbecupzwAqZVaWPM4dd_ICdjZ0",
+                    "isAdmin": "true"
+                }, 
+                body: {
+                    "name": "Jabuticaba",
+                    "qtd" : 5,
+                    "categorieId": "661b156d32e4efa9e54e5770"   
+                }
+            });
+             equal(response.statusCode, 412); 
+        });
+
+        test('# POST /categories', async (t) => {
+            const app = await build(options);
+    
+            t.after(async () => {
+                await app.close();
+            });
+     
+            const response = await app.inject({
+                method: 'POST',
+                url: '/categories',
+                headers: {
+                        "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2lzc2EiLCJpYXQiOjE3MTMzOTY5MTF9.HdqQ_JEXCjo4YdCsLlbecupzwAqZVaWPM4dd_ICdjZ0"
+                }, 
+                body: {
+                    "name": "Categoria de teste",
+                    "img_URL" : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fdisney.fandom.com%2Fpt-br%2Fwiki%2FMike_Wazowski&psig=AOvVaw0UJ-SY5zDaS9UDEzToUTtd&ust=1713574290600000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLjp1OuHzYUDFQAAAAAdAAAAABAJ"
+                    
+                }
+            });
+            equal(response.statusCode, 412); 
+        });
+
+        test('# POST /categories', async (t) => {
+            const app = await build(options);
+    
+            t.after(async () => {
+                await app.close();
+            });
+     
+            const response = await app.inject({
+                method: 'POST',
+                url: '/categories',
+                headers: {
+                        "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2lzc2EiLCJpYXQiOjE3MTMzOTY5MTF9.HdqQ_JEXCjo4YdCsLlbecupzwAqZVaWPM4dd_ICdjE4"
+                }, 
+                body: {
+                    "name": "Categoria de teste",
+                    "img_URL" : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fdisney.fandom.com%2Fpt-br%2Fwiki%2FMike_Wazowski&psig=AOvVaw0UJ-SY5zDaS9UDEzToUTtd&ust=1713574290600000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLjp1OuHzYUDFQAAAAAdAAAAABAJ"
+                    
+                }
+            });
+            equal(response.statusCode, 401); 
+        });
+
         test('# PUT /categories', async(t) => {
             const app = await build(options);
 
@@ -500,7 +567,6 @@ describe('###Tests for Authenticated routes', async(t) => {
             });
             equal(response.statusCode, 404); 
         });
-
+        
     });
 }); 
-
