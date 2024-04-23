@@ -28,7 +28,7 @@ específica
 - POST `/register`: Deve criar um novo usuário. Garanta validação dos campos.
 
 ### Para iniciar:
-- faça um **cd** para a pasta **dositio**
+- faça um **cd** para a pasta **dositio-main**
 - No terminal faça **npm install** para instalar todas as dependências utilizadas no projeto
 
 
